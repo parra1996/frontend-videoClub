@@ -112,8 +112,8 @@ const Login = () => {
                  {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>}
 
                 <div className="designFormulario">
-                    <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e); checkPassword(e)}}/>
+                    <input type="email" name="email" id="email" title="email" placeholder="Email" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input type="password" name="password" id="password" title="password" placeholder="Password" autoComplete="off" onChange={(e)=>{rellenarDatos(e); checkPassword(e)}}/>
                     {msgError}
                     {msgError2}
                 </div>
