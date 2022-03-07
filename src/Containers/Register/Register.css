@@ -1,8 +1,8 @@
-.homeDesign {
+.registerDesign {
     width: 100vw;
     height: 100vh;
 
-    background-color: lightslategray;
+    background-color: pink;
 
     display: flex;
     flex-direction: column;

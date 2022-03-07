@@ -5,8 +5,8 @@ import './Login.css' ;
 const Login = () => {
 
     return (
-        <div>
-
+        <div className="loginDesign">
+            soy Login
         </div>
     )
 }

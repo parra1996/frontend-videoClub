@@ -5,8 +5,8 @@ import './Register.css' ;
 const Register = () => {
 
     return (
-        <div>
-
+        <div className="registerDesign">
+            soy Register
         </div>
     )
 }
