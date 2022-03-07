@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
 import './Login.css';
 
 const Login = () => {
@@ -11,7 +10,7 @@ const Login = () => {
     let navigate = useNavigate();
 
     //1-Hooks (equivalen al estado en los componentes de clase)
-    const [credentials, setCredenciales] = useState("");
+    const [credentials, setCredentials] = useState("");
     const [datosUsuario, setDatosUsuario] = useState({email: "", password: ""});
     const [msgError, setMsgError] = useState("");
     const [msgError2, setMsgError2] = useState("");
@@ -80,7 +79,7 @@ const Login = () => {
                 setMsgError2("Usuario o contraseña inválido")
             }else{
 
-                setCredenciales(resultado.data);
+                setCredentials(resultado.data);
             }
 
 

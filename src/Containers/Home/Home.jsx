@@ -1,14 +1,14 @@
 import {useNavigate} from 'react-router-dom';
 import './Home.css'
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Home = () => {
 
     let navigate = useNavigate();
 
     //Primero comprobamos en el hook si tenemos el token (estamos logeados)
-    const [credentials, setcredentials] = useState(JSON.parse(localStorage.getItem("dataUser")));
+    const [credentials, setCredentials] = useState(JSON.parse(localStorage.getItem("dataUser")));
 
     const takeMeLogin = () => {
         setTimeout(()=>{
@@ -32,11 +32,8 @@ const Home = () => {
                     LOGIN
                 </div>
             </div>
-            
         )
     }
-
-    
 }
 
 export default Home ; 
