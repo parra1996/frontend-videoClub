@@ -13,9 +13,9 @@ const Register = () => {
     //Hooks
 
     const [datosUsuario, setDatosUsuario] = useState({
-            nombre: "", apellido: "", edad: "", email: "", 
+            name: "", surname: "", age: "", email: "", 
             dni: "", password: "", password2: "", telefono: "", 
-            numCuenta: ""
+           rol: "0"
     });
 
     const [msgError, setMsgError] = useState("");
@@ -79,14 +79,14 @@ const Register = () => {
         //2construimos el body
 
         let body = {
-            nombre: datosUsuario.nombre,
-            apellido: datosUsuario.apellido,
-            edad: datosUsuario.edad,
+            nombre: datosUsuario.name,
+            apellido: datosUsuario.surname,
+            edad: datosUsuario.age,
             email: datosUsuario.email,
             dni: datosUsuario.dni,
             password: datosUsuario.password,
             telefono: parseInt(datosUsuario.telefono),
-            numCuenta: datosUsuario.numCuenta
+            rol: "0"
         }
 
         console.log("le llaman BODY", body);

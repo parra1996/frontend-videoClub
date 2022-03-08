@@ -1,33 +1,34 @@
+import React, { useState,useEffect } from 'react';
+
 import {useNavigate} from 'react-router-dom';
 import './Home.css'
 
-import { useState } from 'react';
 
 const Home = () => {
 
     let navigate = useNavigate();
 
     //Primero comprobamos en el hook si tenemos el token (estamos logeados)
-    const [credentials, setCredentials] = useState(JSON.parse(localStorage.getItem("dataUser")));
+    const [credenciales, setCredenciales] = useState(JSON.parse(localStorage.getItem("dataUser")));
 
     const takeMeLogin = () => {
         setTimeout(()=>{
             navigate("/login");
-        },1500)
+        },500)
     }
-
-    if(credentials?.dataUser?.token !== undefined){
+    console.log(credenciales?.dataUser?.token)
+    if(credenciales?.dataUser?.token !== undefined){
 
         return(
             <div>
-                Hola {credentials.dataUser.nombre}, bienvenido a tu app favorita
+                Hola {credenciales.dataUser.nombre}, bienvenido a tu app favorita
             </div>
         )
 
     }else{
         return(
             <div className='homeDesign'>
-                Hola foraster@, debes de logearte primero....
+                In case you are not logged in, please do it
                 <div className='designBotonHome' onClick={()=>takeMeLogin()}>
                     LOGIN
                 </div>

@@ -10,7 +10,7 @@ const Login = () => {
     let navigate = useNavigate();
 
     //1-Hooks (equivalen al estado en los componentes de clase)
-    const [credentials, setCredentials] = useState("");
+    const [credenciales, setcredenciales] = useState("");
     const [datosUsuario, setDatosUsuario] = useState({email: "", password: ""});
     const [msgError, setMsgError] = useState("");
     const [msgError2, setMsgError2] = useState("");
@@ -52,11 +52,12 @@ const Login = () => {
         //que entremos en bucles infinitos.
         // console.log("Credenciales vale....", credenciales);
 
-        if(credentials?.token !== undefined){
+        if(credenciales?.token !== undefined){
 
             setTimeout(()=>{
                 navigate("/");
             }, 3000);
+            console.log(credenciales.token)
         };
 
     });
@@ -79,7 +80,7 @@ const Login = () => {
                 setMsgError2("Usuario o contraseña inválido")
             }else{
 
-                setCredentials(resultado.data);
+                setcredenciales(resultado.data);
             }
 
 
@@ -97,9 +98,9 @@ const Login = () => {
     }
     //2-Render (lo que pinta en pantalla)
 
-    if(credentials?.token !== undefined){
+    if(credenciales?.token !== undefined){
         return(
-            <div>Hola {credentials?.usuario?.name}, bienvenido a Finder, 
+            <div>Hola {credenciales?.usuario?.name}, bienvenido a Finder, 
             donde ligar ya no es un milagro.</div>
         )
     } else {
