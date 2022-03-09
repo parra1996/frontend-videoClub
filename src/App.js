@@ -17,7 +17,7 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-
+        <Header/>
         <Routes>
           <Route path={'/'} element={<Home/>} />
           <Route path={'/profile'} element={<Profile/>} />
@@ -26,7 +26,7 @@ function App() {
           <Route path={"/moviedetail"} element={<MovieDetail/>}/>
 
         </Routes>
-
+        <Footer/>
       </BrowserRouter>
 
     </div>

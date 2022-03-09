@@ -9,12 +9,13 @@ const Register = () => {
 
     let navigate = useNavigate();
 
+    
     //Hooks
 
     const [datosUsuario, setDatosUsuario] = useState({
-            name: "", surname: "", age: "", email: "", 
+            nombre: "", apellido: "", edad: "", email: "", 
             dni: "", password: "", password2: "", telefono: "", 
-           rol: "0"
+            numCuenta: ""
     });
 
     const [msgError, setMsgError] = useState("");
@@ -78,14 +79,14 @@ const Register = () => {
         //2construimos el body
 
         let body = {
-            name: datosUsuario.name,
-            surname: datosUsuario.surname,
-            age: datosUsuario.age,
+            name: datosUsuario.nombre,
+            surname: datosUsuario.apellido,
+            age: datosUsuario.edad,
             email: datosUsuario.email,
             dni: datosUsuario.dni,
             password: datosUsuario.password,
             telefono: parseInt(datosUsuario.telefono),
-            rol: "0"
+            numCuenta: datosUsuario.numCuenta
         }
 
         console.log("le llaman BODY", body);
@@ -93,15 +94,19 @@ const Register = () => {
 
         try {
             
-            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios", body);
+            let resultado = await axios.post("https://jppl-videoclub.herokuapp.com/usuarios", body);
             console.log(resultado);
             
                 setTimeout(()=>{
                     navigate("/login");
                 },1000);
+            
+            
+            
         } catch (error) {
             console.log(error);
         }
+
     }
 
     return(
@@ -111,14 +116,15 @@ const Register = () => {
                 <div className="upCardRegister">Formulario de Registro</div>
                 <div className="middleCardRegister">
                     {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>}
-                    <input type="text" name="name" id="name" title="name" placeholder="Nombre:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="surname" id="surname" title="surname" placeholder="Apellido:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="age" id="age" title="age" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input type="text" name="nombre" id="nombre" title="nombre" placeholder="Nombre:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input type="text" name="apellido" id="apellido" title="apellido" placeholder="Apellido:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input type="text" name="edad" id="edad" title="edad" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="text" name="dni" id="dni" title="dni" placeholder="DNI" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password2" id="password2" title="password2" placeholder="Repite contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="text" name="telefono" id="telefono" title="telefono" placeholder="Telefono" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder="NºCuenta" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                 </div>
                 <div className="bottomCardRegister">
                     {msgError}

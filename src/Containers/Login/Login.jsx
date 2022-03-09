@@ -41,7 +41,9 @@ const Login = (props) => {
                  password: datosUsuario.password
             }
 
-            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios/login",body);
+            let resultado = await axios.post("https://jppl-videoclub.herokuapp.com/usuarios/login",body);
+
+            console.log(resultado.data)
 
             //Cambiamos el valor del hook credenciales, por lo tanto se recargará el componente
             if(resultado.data === "Usuario o contraseña inválido"){
