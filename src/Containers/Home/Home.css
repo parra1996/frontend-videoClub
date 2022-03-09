@@ -1,8 +1,9 @@
-.homeDesign {
-    width: 100vw;
-    height: 100vh;
 
-    background-color: aquamarine;
+.designHome {
+
+    background-color: beige;
+    
+    height: 26.1em;
 
     display: flex;
     flex-direction: column;
@@ -10,13 +11,13 @@
     align-items: center;
 }
 
-.designBotonHome {
-    height: 5em;
-    width: 10em;
+.designRooster {
+    display: flex;
+    flex-wrap: wrap;
 
-    background-color: red;
+
 }
 
-.designBotonHome:hover{
-    background-color: brown;
+.designRooster>*{
+    flex-basis: 25%;
 }
