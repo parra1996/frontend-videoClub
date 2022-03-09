@@ -5,6 +5,9 @@ import axios from 'axios';
 
 import './Login.css';
 
+import { connect } from 'react-redux';
+import { LOGIN } from '../../redux/types';
+
 const Login = () => {
 
     let navigate = useNavigate();
@@ -129,5 +132,4 @@ const Login = () => {
 
 };
 
-
-export default Login;
+export default connect()(Login);

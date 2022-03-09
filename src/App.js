@@ -1,12 +1,15 @@
+
 import './App.css';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 import Home from './Containers/Home/Home';
-import Profile from './Containers/Profile/Profile';
-import Register from './Containers/Register/Register';
 import Login from './Containers/Login/Login';
-
+import Register from './Containers/Register/Register';
+import Profile from './Containers/Profile/Profile';
+import MovieDetail from './Containers/MovieDetail/MovieDetail';
 
 
 function App() {
@@ -20,6 +23,8 @@ function App() {
           <Route path={'/profile'} element={<Profile/>} />
           <Route path={'/register'} element={<Register/>} />
           <Route path={'/login'} element={<Login/>} />
+          <Route path={"/moviedetail"} element={<MovieDetail/>}/>
+
         </Routes>
 
       </BrowserRouter>
