@@ -34,3 +34,14 @@
     font-weight: bold;
     cursor:pointer;
 }
+
+.searchDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.relleno {
+    height: 1em;
+}

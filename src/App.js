@@ -10,6 +10,7 @@ import Login from './Containers/Login/Login';
 import Register from './Containers/Register/Register';
 import Profile from './Containers/Profile/Profile';
 import MovieDetail from './Containers/MovieDetail/MovieDetail';
+import SearchResults from './Containers/SearchResults/SearchResults';
 
 
 function App() {
