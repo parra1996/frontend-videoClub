@@ -48,7 +48,7 @@ const Header = (props) => {
                 <div className="headerSpace"></div>
                 <div className="headerSpace"></div>
                 <div className="headerSpace linksDesign">
-                    <div className="link" onClick={()=>navegar("/profile")}>{props.credentials?.usuario.nombre}</div>
+                    <div className="link" onClick={()=>navegar("/profile")}>{props.credentials?.usuario.name}</div>
                     <div className="link" onClick={()=>logOut()}>Logout</div>    
                 </div>
             </div>
