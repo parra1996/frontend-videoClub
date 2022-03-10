@@ -76,8 +76,10 @@ const Header = (props) => {
                     <div className="relleno"></div>
                 </div>
                 <div className="headerSpace linksDesign">
+                    <div className="link" onClick={() => navegar("/peliculas")}>Ver peliculas</div>
                     <div className="link" onClick={() => navegar("/login")}>Login</div>
                     <div className="link" onClick={() => navegar("/register")}>Registro</div>
+
                 </div>
             </div>
         )

@@ -1,0 +1,13 @@
+
+.designPedido {
+
+    background-color: beige;
+    
+    height: 32em;
+ 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

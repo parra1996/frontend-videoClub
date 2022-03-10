@@ -12,6 +12,7 @@ import Profile from './Containers/Profile/Profile';
 import MovieDetail from './Containers/MovieDetail/MovieDetail';
 import SearchResults from './Containers/SearchResults/SearchResults';
 import Pedido from './Containers/Pedido/Pedido';
+import Peliculas from './Containers/Peliculas/Peliculas';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path={"/moviedetail"} element={<MovieDetail/>}/>
           <Route path={"/searchresults"} element={<SearchResults/>}/>
           <Route path={"/pedido"} element={<Pedido/> }/>
+          <Route path={'/peliculas'} element={<Peliculas/>} />
 
         </Routes>
         <Footer/>
