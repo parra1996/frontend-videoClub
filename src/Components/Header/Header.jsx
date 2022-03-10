@@ -67,7 +67,9 @@ const Header = (props) => {
     if (!props.credentials?.token) {
         return (
             <div className='designHeader'>
-                <div className="headerSpace"></div>
+                <div className="headerSpace">
+                    <img className='homeButton' src={require('../../img/home4.png')} onClick={()=>navigate('/')} alt="home" />
+                </div>
                 <div className="headerSpace searchDesign">
                     <Input.Group compact>
                         <Input style={{ width: 'calc(100% - 200px)' }} placeholder="Busca una película por título" onChange={(ev)=>manejador(ev)}/>
@@ -86,7 +88,9 @@ const Header = (props) => {
     } else {
         return (
             <div className='designHeader'>
-                <div className="headerSpace"></div>
+                <div className="headerSpace">
+                    <img className='homeButton' src={require('../../img/home4.png')}  alt="home" />
+                </div>
                 <div className="headerSpace searchDesign">
                     <Input.Group compact>
                         <Input style={{ width: 'calc(100% - 200px)' }} placeholder="Busca una película por título" onChange={(ev)=>manejador(ev)}/>

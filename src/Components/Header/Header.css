@@ -16,8 +16,20 @@
     width: 33vw;
     height: 15em;
 
+    display: flex;
+    flex-direction: row;
 }
 
+
+.homeButton { 
+    width: 10vw;
+    height: 25vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .linksDesign {
     display: flex;
     flex-direction: row;
