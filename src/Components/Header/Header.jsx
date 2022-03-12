@@ -89,7 +89,7 @@ const Header = (props) => {
         return (
             <div className='designHeader'>
                 <div className="headerSpace">
-                    <img className='homeButton' src={require('../../img/home4.png')}  alt="home" />
+                    <img className='homeButton' src={require('../../img/home4.png')} onClick={()=>navigate('/')} alt="home" />
                 </div>
                 <div className="headerSpace searchDesign">
                     <Input.Group compact>
@@ -99,7 +99,7 @@ const Header = (props) => {
                     <div className="relleno"></div>
                 </div>
                 <div className="headerSpace linksDesign">
-                    <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.nombre}</div>
+                    <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.name}</div>
                     <div className="link" onClick={() => logOut()}>Logout</div>
                     <div className="link" onClick={() => navegar("/peliculas")}>Ver peliculas</div>
                 </div>

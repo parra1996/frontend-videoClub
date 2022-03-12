@@ -2,6 +2,7 @@
 import React from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
+import moment from "moment" ;
 
 import './Rent.css';
 
@@ -13,10 +14,11 @@ const Rent = (props) => {
         
         let body = {
             //este body corresponde al body de pedido de postman
-            precio: 5,
+            precio: 10,
             peliculaId: props.id,
             usuarioId: props.idUser,
-            fechaEntrega: "nuncaaaaaaaaaaaaaaaa hahahaha"
+            fecha:'2022-03-12 18:56:38',
+            fechaDev: '2022-03-15 18:56:38'
         }
 
         let config = {
@@ -25,11 +27,12 @@ const Rent = (props) => {
 
         try {
 
-            let res = await axios.post("https://movie-db-geekshubs.herokuapp.com/pedidos",body,config);
+            let res = await axios.post("https://jppl-videoclub.herokuapp.com/pedidos",body,config);
 
             if(res){
                 console.log(res);
                 navigate("/");
+                alert("tu pedido ha sido realizado con exito!");
             }
 
         } catch (error) {
