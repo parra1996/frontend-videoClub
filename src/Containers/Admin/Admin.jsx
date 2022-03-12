@@ -20,7 +20,7 @@ const Admin = (props) => {
  
  
     return (
-        <div className=''></div>
+        <div className='adminDesign'></div>
     )
 }
 export default Admin;

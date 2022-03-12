@@ -1,0 +1,8 @@
+.adminDesign {
+    height: 30em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
