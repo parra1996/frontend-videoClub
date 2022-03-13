@@ -15,7 +15,7 @@ const Rent = (props) => {
         let body = {
             //este body corresponde al body de pedido de postman
             precio: 10,
-            peliculaId: 491,
+            peliculaId: props.id,
             usuarioId: props.idUser,
             fecha:moment().format() ,
             fechaDev: moment().format()
