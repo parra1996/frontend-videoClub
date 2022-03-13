@@ -3,7 +3,7 @@
 
     background-color: beige;
     
-    height: 26.1em;
+    height: 31em;
 
     display: flex;
     flex-direction: column;
@@ -11,12 +11,3 @@
     align-items: center;
 }
 
-.designRooster {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.designRooster>*{
-    flex-basis: 25%;
-    
-}

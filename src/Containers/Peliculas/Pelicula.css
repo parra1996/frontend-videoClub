@@ -1,13 +1,24 @@
 
+
+
 .designPedido {
 
     background-color: beige;
     
-    height: 32em;
- 
+    height: 31em;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.designRooster {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.designRooster>*{
+    flex-basis: 25%;
+    
 }
