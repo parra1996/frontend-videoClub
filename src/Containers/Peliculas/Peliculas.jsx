@@ -31,7 +31,7 @@ const Pelicula = (props) => {
 
         try {
 
-            let res = await axios.get("https://lug-movie-club.herokuapp.com/movie-db/new");
+            let res = await axios.get("https://jppl-videoclub.herokuapp.com/peliculas/todas");
 
             //Una vez han venido los datos del backend, nosotros, lo siguiente que haremos para que no se pierdan
             //será setear esos datos en el hook, haciendo que las peliculas estén disponibles 
@@ -39,7 +39,7 @@ const Pelicula = (props) => {
 
             setTimeout(()=>{
 
-                setFilms(res.data.results);
+                setFilms(res.data);
             },2000);
 
         } catch (error) {
@@ -72,8 +72,8 @@ const Pelicula = (props) => {
                             //Al mapear, cada elemento que se itera del array (en este caso pelicula es ese elemento),
                             //si le hacemos propiedad onclick y pasamos el elemento como argumento,
                             //a esa funcion le va a llegar el objeto que hayamos clickado entero
-                            <div key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
-                                <img src={raiz + pelicula.poster_path} alt={pelicula.title}/>
+                            <div className='cardPelicula' key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
+                                <img className='fotoCard' src={ pelicula.image} alt={pelicula.title}/>
                             </div>
                         )
                     })
