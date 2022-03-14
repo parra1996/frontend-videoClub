@@ -11,8 +11,8 @@ import Register from './Containers/Register/Register';
 import Profile from './Containers/Profile/Profile';
 import MovieDetail from './Containers/MovieDetail/MovieDetail';
 import SearchResults from './Containers/SearchResults/SearchResults';
-import Pedido from './Containers/Pedido/Pedido';
 import Peliculas from './Containers/Peliculas/Peliculas';
+import Admin from './Containers/Admin/Admin';
 
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
           <Route path={'/login'} element={<Login/>} />
           <Route path={"/moviedetail"} element={<MovieDetail/>}/>
           <Route path={"/searchresults"} element={<SearchResults/>}/>
-          <Route path={"/pedido"} element={<Pedido/> }/>
           <Route path={'/peliculas'} element={<Peliculas/>} />
+          <Route path={'/admin'} element={<Admin/>} />
 
         </Routes>
         <Footer/>
