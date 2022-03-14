@@ -13,7 +13,7 @@ const Profile = (props) => {
 
     //Hooks
     const [datosUsuario, setDatosUsuario] = useState({
-        nombre: props.credentials.usuario.nombre, apellido: props.credentials.usuario.apellido, edad: props.credentials.usuario.edad, email: props.credentials.usuario.email, 
+        nombre: props.credentials.usuario.name, apellido: props.credentials.usuario.apellido, edad: props.credentials.usuario.edad, email: props.credentials.usuario.email, 
         dni: props.credentials.usuario.dni,  telefono: props.credentials.usuario.telefono, 
         numCuenta: props.credentials.usuario.numCuenta
     });
@@ -33,11 +33,7 @@ const Profile = (props) => {
     const updateUser = async () => {
 
         let body = {
-            nombre: datosUsuario.nombre,
-            apellido: datosUsuario.apellido,
-            email: datosUsuario.email,
             telefono: parseInt(datosUsuario.telefono),
-            numCuenta: datosUsuario.numCuenta
         }
 
         let config = {
@@ -46,11 +42,8 @@ const Profile = (props) => {
 
         try {
             //Hacemos el update en la base de datos
-            let res = await axios.put(`https://movie-db-geekshubs.herokuapp.com/usuarios/${props.credentials.usuario.id}`,body, config);
+            let res = await axios.put(`https://jppl-videoclub.herokuapp.com/newpassword/${props.credentials.usuario.id}`,body, config);
 
-            
-            
-            
             if(res){
                 //Guardamos en redux
                 props.dispatch({type:MODIFY_CREDENTIALS, payload: datosUsuario});
@@ -64,14 +57,10 @@ const Profile = (props) => {
     return (
         <div className="designProfile">
             <div className="designProfileHalf profileLeft">
-                <div className="profileField"><b>Nombre:<input type="text" name="nombre" id="nombre" title="nombre" placeholder={props.credentials.usuario.nombre} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                </b></div>
-                <div className="profileField"><b>Apellidos:</b><input type="text" name="apellido" id="apellido" title="apellido" placeholder={props.credentials.usuario.apellido} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                </div>
-                <div className="profileField"><b>Email:</b><input type="email" name="email" id="email" title="email" placeholder={props.credentials.usuario.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
+                <div className="profileField"><b>Nombre:</b>{props.credentials.usuario.nombre}</div>
+                <div className="profileField"><b>Apellidos:</b>{props.credentials.usuario.apellido}</div>
+                <div className="profileField"><b>Email:</b>{props.credentials.usuario.email}</div>
                 <div className="profileField"><b>Teléfono:</b><input type="text" name="telefono" id="telefono" title="telefono" placeholder={props.credentials.usuario.telefono} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                </div>
-                <div className="profileField"><b>N. cuenta:</b><input type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder={props.credentials.usuario.numCuenta} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                 </div>
             </div>
             <div className="designProfileHalf profileRight">
