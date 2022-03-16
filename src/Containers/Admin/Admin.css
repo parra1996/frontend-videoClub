@@ -1,10 +1,28 @@
 .adminDesign {
-    height: 30em;
+    height: 32em;
 
-    display: flex;
+    display: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background-color: lightcoral;
+}
+
+.usuarios1 {
+
+    background-color: white;
+
+    height: 3em;
+    width: 15em;
+
+    padding: 1em;
+
+}
+
+.listaUsuarios {
+    display: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }

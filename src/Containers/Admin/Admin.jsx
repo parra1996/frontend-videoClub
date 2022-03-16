@@ -44,28 +44,22 @@ const Admin = (props) => {
     },)
 
  
-    if(usuarios[0]?.id != undefined){
+    if(usuarios[0]?.id !== undefined){
         return(
-            <div className="designRooster">
-
+            <div className="adminDesign">
+                <div className='listaUsuarios'>
+                <p>LISTA DE TODOS LOS USUARIOS</p>
                 {
-                    //Voy a mapear las películas
                     usuarios.map(usuarios => {
-                        //a cada elemento que voy a mapear
-                        //le brindo un KEY (obligatorio) que lo distinguirá de
-                        //el resto de elementos
                         return (
-                            //Al mapear, cada elemento que se itera del array (en este caso pelicula es ese elemento),
-                            //si le hacemos propiedad onclick y pasamos el elemento como argumento,
-                            //a esa funcion le va a llegar el objeto que hayamos clickado entero
-                            <div  key={usuarios.id} >
-                                <p>{usuarios.name}</p>
-
+                            <div  key={usuarios.id} className="usuarios1" >
+                               
+                                <p>id:{usuarios.id} . Nombre: {usuarios.name} {usuarios.surname}</p>
                             </div>
                         )
                     })
                 }
-                
+                </div>
             </div>
         )
     }else{

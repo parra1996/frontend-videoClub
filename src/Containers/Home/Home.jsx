@@ -5,8 +5,6 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { MOVIE_DETAIL } from '../../redux/types';
 import { raiz } from '../../utiles';
-import 'antd/dist/antd.css';
-import {Carousel} from 'antd';
 import './Home.css';
 
 
