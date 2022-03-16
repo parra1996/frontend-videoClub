@@ -8,6 +8,14 @@ import './Admin.css'
 const Admin = (props) => {
  
     let navigate = useNavigate();
+
+    const users = async () => {
+
+        let res = await axios.get("https://jppl-videoclub.herokuapp.com/usuarios")
+
+        console.log(res) ;
+
+    }
  
     useEffect(()=>{
 

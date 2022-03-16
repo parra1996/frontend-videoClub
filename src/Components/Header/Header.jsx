@@ -107,6 +107,7 @@ const Header = (props) => {
                     <div className="link" onClick={() => navegar("/profile")}>{props.credentials?.usuario.name} {props.credentials?.usuario.surname}</div>
                     <div className="link" onClick={() => logOut()}>Logout</div>
                     <div className="link" onClick={() => navegar("/peliculas")}>Ver peliculas</div>
+                    <div className="link" onClick={() => navegar("/admin")}>Admin</div>
                 </div>
             </div>
         )
