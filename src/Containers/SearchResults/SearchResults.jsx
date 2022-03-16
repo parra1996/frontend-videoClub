@@ -16,11 +16,12 @@ const SearchResults = (props) => {
         console.log(props.films);
     },[]);
 
+
     //useEffect custom para el hook films
 
-    // useEffect(()=>{
-    //     console.log("vaya, , films ha cambiado, ", props.films);
-    // },[props.films]);
+    useEffect(()=>{
+        console.log("vaya, , films ha cambiado, ", props.films);
+    },[props.films]);
 
     // const traePelis = async () => {
 
@@ -52,7 +53,7 @@ const SearchResults = (props) => {
         //Redirigimos a movieDetail con navigate
         navigate("/moviedetail");
     }
- 
+
     if(props.films[0]?.id !== undefined){
         return(
             <div className="designRooster">
@@ -68,7 +69,8 @@ const SearchResults = (props) => {
                             //si le hacemos propiedad onclick y pasamos el elemento como argumento,
                             //a esa funcion le va a llegar el objeto que hayamos clickado entero
                             <div key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
-                                <img className='cartel' src={pelicula.image} alt={pelicula.title}/>
+                                <p>{pelicula.title}</p>
+                                <img className='cartel' src={pelicula.image} alt={pelicula.titulo}/>
                             </div>
                         )
                     })

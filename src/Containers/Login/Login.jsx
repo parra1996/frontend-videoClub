@@ -52,15 +52,12 @@ const Login = (props) => {
 
                 //Guardaríamos los datos en redux...
 
-                props.dispatch({ type: LOGIN, payload: resultado.data });
-                console.log(props.credentials.usuario)
-                if(props.credentials === true){
-                        navigate("/admin") ;
-                } else {
-                    setTimeout(() => {
-                        navigate("/");
-                    }, 500);
-                }
+                props.dispatch({type:LOGIN, payload: resultado.data});
+
+
+                setTimeout(()=>{
+                    navigate("/");
+                },1500);
             }
 
 

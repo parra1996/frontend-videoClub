@@ -13,7 +13,7 @@ const Profile = (props) => {
 
     //Hooks
     const [datosUsuario, setDatosUsuario] = useState({
-        nombre: props.credentials.usuario.name, apellido: props.credentials.usuario.apellido, edad: props.credentials.usuario.edad, email: props.credentials.usuario.email, 
+        nombre: props.credentials.usuario.nombre, apellido: props.credentials.usuario.apellido, edad: props.credentials.usuario.edad, email: props.credentials.usuario.email, 
         dni: props.credentials.usuario.dni,  telefono: props.credentials.usuario.telefono, 
         numCuenta: props.credentials.usuario.numCuenta
     });
@@ -57,8 +57,8 @@ const Profile = (props) => {
     return (
         <div className="designProfile">
             <div className="designProfileHalf profileLeft">
-                <div className="profileField"><b>Nombre:</b>{props.credentials.usuario.nombre}</div>
-                <div className="profileField"><b>Apellidos:</b>{props.credentials.usuario.apellido}</div>
+                <div className="profileField"><b>Nombre:</b>{props.credentials.usuario.name}</div>
+                <div className="profileField"><b>Apellidos:</b>{props.credentials.usuario.surname}</div>
                 <div className="profileField"><b>Email:</b>{props.credentials.usuario.email}</div>
                 <div className="profileField"><b>Teléfono:</b><input type="text" name="telefono" id="telefono" title="telefono" placeholder={props.credentials.usuario.telefono} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                 </div>

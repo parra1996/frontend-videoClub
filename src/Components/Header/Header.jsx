@@ -22,6 +22,7 @@ const Header = (props) => {
         // console.log(props.credentials);
     })
 
+    
     const navegar = (lugar) => {
 
         setTimeout(() => {
@@ -47,8 +48,12 @@ const Header = (props) => {
     
         //Axios que trae resultados....
 
+        let config = {
+            headers: { Authorization: `Bearer ${props.credentials.token}` }
+        };
+
         try {
-            let resultados = await axios.get(`https://videostore-backend.herokuapp.com/films/custom?arg=${titulo}`);
+            let resultados = await axios.get(`https://jppl-videoclub.herokuapp.com/peliculas/titulo/${titulo}`, config);
 
             //Guardo en redux los resultados de las películas
 
@@ -106,11 +111,9 @@ const Header = (props) => {
             </div>
         )
     }
-
-
-
 }
 
 export default connect((state) => ({
-    credentials: state.credentials
+    credentials: state.credentials,
+    search: state.search
 }))(Header);

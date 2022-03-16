@@ -10,8 +10,6 @@ import './MovieDetail.css';
 const MovieDetail = (props) => {
 
     let navigate = useNavigate();
-    
-
 
     useEffect(()=> {
         //Compruebo si hay datos de la película escogida en redux, en caso de NO
