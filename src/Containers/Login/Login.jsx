@@ -43,7 +43,7 @@ const Login = (props) => {
 
             let resultado = await axios.post("https://jppl-videoclub.herokuapp.com/usuarios/login", body);
 
-            console.log(resultado.data)
+            console.log(resultado.data.usuario)
 
             //Cambiamos el valor del hook credenciales, por lo tanto se recargará el componente
             if (resultado.data === "Usuario o contraseña inválido") {
@@ -51,13 +51,14 @@ const Login = (props) => {
             } else {
 
                 //Guardaríamos los datos en redux...
-
+                if(resultado.data.usuario.rol === true){
+                    navigate('/admin');
+                } else {
+                    navigate("/");
+                }
                 props.dispatch({type:LOGIN, payload: resultado.data});
 
-
-                setTimeout(()=>{
-                    navigate("/");
-                },1500);
+               
             }
 
 

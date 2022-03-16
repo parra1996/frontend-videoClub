@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
+import {connect} from 'react-redux' ;
  
 import './Admin.css'
  
@@ -9,7 +10,10 @@ const Admin = (props) => {
     let navigate = useNavigate();
  
     useEffect(()=>{
-    //UseEffect equivalente a componentDidMount (montado)
+
+        if (props.credentials.usuario.rol !== true) {
+            navigate("/");
+        }
  
     },[])
  
@@ -25,4 +29,6 @@ const Admin = (props) => {
         </div>
     )
 }
-export default Admin;
+export default connect ((state) => ({
+    credentials : state.credentials 
+}))(Admin)
