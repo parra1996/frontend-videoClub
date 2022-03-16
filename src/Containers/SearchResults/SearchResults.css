@@ -1,3 +1,22 @@
+.designRooster {
+    height: 32em;
+    width: 100vw;
+
+    background-color: lightskyblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloPelicula {
+    font-size: larger;
+    font-weight: bold;
+
+    color: red;
+}
+
 
 .cartel {
     height: 15em;

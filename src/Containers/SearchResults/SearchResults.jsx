@@ -68,8 +68,8 @@ const SearchResults = (props) => {
                             //Al mapear, cada elemento que se itera del array (en este caso pelicula es ese elemento),
                             //si le hacemos propiedad onclick y pasamos el elemento como argumento,
                             //a esa funcion le va a llegar el objeto que hayamos clickado entero
-                            <div key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
-                                <p>{pelicula.title}</p>
+                            <div className='designSR' key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
+                                <p className='tituloPelicula'>{pelicula.titulo}</p>
                                 <img className='cartel' src={pelicula.image} alt={pelicula.titulo}/>
                             </div>
                         )
