@@ -83,6 +83,15 @@ const SearchResults = (props) => {
             <div className='designHome'>
                 <div className="marginLoader">
                     <img src={require('../../img/loader.gif')} alt="cargador"/>
+
+                   { setTimeout(() => {
+                        alert("we dont have this movie on our store, please search for another one.")
+
+                        {setTimeout(() => {
+                            navigate('/')
+                        }, 2000);}
+                    }, 5000)};
+
                 </div>
             </div>
         )

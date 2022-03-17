@@ -52,22 +52,27 @@ const Header = (props) => {
             headers: { Authorization: `Bearer ${props.credentials.token}` }
         };
 
-        try {
-            let resultados = await axios.get(`https://jppl-videoclub.herokuapp.com/peliculas/titulo/${titulo}`, config);
+        if(props.credentials.token === ""){
+            alert('sorry, but you must be logged in to search movies')
+        }else {
 
-            //Guardo en redux los resultados de las películas
-
-            props.dispatch({type: MOVIES_TITLE, payload: resultados.data});
-
-            setTimeout(()=>{
-                navigate("/searchresults");
-            },500);
-
-
-        } catch (error) {
-            console.log(error);
+            try {
+                let resultados = await axios.get(`https://jppl-videoclub.herokuapp.com/peliculas/titulo/${titulo}`, config);
+    
+                //Guardo en redux los resultados de las películas
+    
+                props.dispatch({type: MOVIES_TITLE, payload: resultados.data});
+    
+                setTimeout(()=>{
+                    navigate("/searchresults");
+                },500);
+    
+    
+            } catch (error) {
+                console.log(error);
+            }
         }
-    }
+        }
 
     if (!props.credentials?.token) {
         return (
