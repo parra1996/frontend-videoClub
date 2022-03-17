@@ -85,7 +85,7 @@ const SearchResults = (props) => {
                     <img src={require('../../img/loader.gif')} alt="cargador"/>
 
                    { setTimeout(() => {
-                        alert("we dont have this movie on our store, please search for another one.")
+                        alert("we don't have this movie on our store, please search for another one.")
 
                         {setTimeout(() => {
                             navigate('/')
