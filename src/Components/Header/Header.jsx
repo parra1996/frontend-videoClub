@@ -77,8 +77,8 @@ const Header = (props) => {
                 </div>
                 <div className="headerSpace searchDesign">
                     <Input.Group compact>
-                        <Input style={{ width: 'calc(100% - 200px)' }} placeholder="Busca una película por título" onChange={(ev)=>manejador(ev)}/>
-                        <Button onClick={()=>busquedaPorTitulo()} type="primary">Go!</Button>
+                        <Input style={{ width: 'calc(100% - 200px)' }} placeholder="find a movie by title" onChange={(ev)=>manejador(ev)}/>
+                        <Button className='boton' onClick={()=>busquedaPorTitulo()} type="primary">Search</Button>
                     </Input.Group>
                     <div className="relleno"></div>
                 </div>

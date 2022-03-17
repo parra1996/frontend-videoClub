@@ -34,7 +34,7 @@ const MovieDetail = (props) => {
                     </div>
                 </div>
                 <div className="filmDetailHalf right">
-                    <img className='cartel' src={props.search.image} alt={props.search.titulo} /></div>
+                    <img className='cartel2' src={props.search.image} alt={props.search.titulo} /></div>
             </div>
         </div>
     )
