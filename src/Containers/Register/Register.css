@@ -1,6 +1,6 @@
-.registerDesign {
+.designRegister {
     width: 100vw;
-    height: 100vh;
+    height: 42em;
 
     background-color: pink;
 
@@ -14,7 +14,7 @@
 .cardRegister {
 
     height: 40em;
-    width: 50em;
+    width: 70em;
 
     background-color: lightcoral;
 
@@ -27,26 +27,63 @@
 }
 
 .upCardRegister {
-    height: 10em;
+    height: 5em;
+    width: 10em;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   background-color: green;
 
     color: white;
     font-size: 2em;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
 
 }
 
 .middleCardRegister {
     height: 20em;
+    width: 55em;
 
-    align-items: center;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 
     font-size : 1em;
     color: black;
 
+    background-color: yellow;
+
+}
+
+.inputs {
+
+    height: 20em;
+    width: 27.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: brown;
+}
+
+.foticos {
+
+    height: 20em;
+    width: 27.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: orange;
 }
 
 .bottomCardRegister {
@@ -78,3 +115,4 @@
     font-weight: bold;
     cursor: pointer;
 }
+
