@@ -1,9 +1,9 @@
 .adminDesign {
     height: 32em;
 
-    display: wrap;
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
 
     background-color: lightcoral;
@@ -18,11 +18,13 @@
 
     padding: 1em;
 
+    border: 1em gray;
+
 }
 
-.listaUsuarios {
-    display: wrap;
-    flex-direction: column;
+/* .listaUsuarios {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-}
+} */

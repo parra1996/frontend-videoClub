@@ -60,7 +60,7 @@ const Pelicula = (props) => {
  
     if(films[0]?.id != undefined){
         return(
-            <div className="designRooster">
+            <div className="designPelicula">
 
                 {
                     //Voy a mapear las películas
@@ -74,7 +74,6 @@ const Pelicula = (props) => {
                             //a esa funcion le va a llegar el objeto que hayamos clickado entero
                             <div className='cardPelicula' key={pelicula.id} onClick={()=>escogePelicula(pelicula)}>
                                 <img className='fotoCard' src={ pelicula.image} alt={pelicula.title}/>
-                                <p>{pelicula.sinopsis}</p>
 
                             </div>
                         )
