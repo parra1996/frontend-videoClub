@@ -1,8 +1,8 @@
 
 .designHeader {
-    height: 15em;
+    height: 8em;
 
-    background-color: darkblue;
+    background-color: rgb(56, 55, 55);
 
     color: white;
 
@@ -14,16 +14,18 @@
 
 .headerSpace {
     width: 33vw;
-    height: 15em;
+    height: 8em;
 
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 
 .homeButton { 
-    width: 10vw;
-    height: 25vh;
+    width: 5em;
+    height: 5em;
 
     display: flex;
     flex-direction: row;
