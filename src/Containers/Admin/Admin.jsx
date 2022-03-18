@@ -33,14 +33,14 @@ const Admin = (props) => {
     }
 
     const traerPedidos = async () => {
-        
+
         let config = {
             headers: { Authorization: `Bearer ${props.credentials.token}` }
         };
 
         try {
 
-            let res = await axios.get("https://jppl-videoclub.herokuapp.com/pedidos", config)
+            let res = await axios.get(`https://jppl-videoclub.herokuapp.com/pedidos`, config)
 
             console.log(res.data);
 
@@ -81,7 +81,20 @@ const Admin = (props) => {
                             )
                         })
                     }
+                    <p>LISTA DE TODOS LOS PEDIDOS</p>
+                    {
+                        pedidos.map(pedidos => {
+                            return (
+                                <div key={pedidos.id} className="pedidos1" >
+
+                                    <p>id:{pedidos.id}. Nombre: {pedidos.usuarioId}. Pelicula: {pedidos.peliculaId}</p>
+                                </div>
+                            )
+                        })
+                    }
+
                 </div>
+
             </div>
         )
     } else {

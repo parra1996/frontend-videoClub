@@ -9,7 +9,14 @@ import "./Profile.css";
 
 const Profile = (props) => {
 
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
+    
+    
     let navigate = useNavigate();
+
+    const [pedidos, setPedidos] = useState([]);
 
     //Hooks
     const [datosUsuario, setDatosUsuario] = useState({
@@ -35,17 +42,33 @@ const Profile = (props) => {
         if (props.credentials.token === '') {
             navigate("/");
         }
+
+        mostrarPedido();
     })
+
+    const mostrarPedido = async () => {
+
+
+        let id = props.credentials.usuario.id ;
+
+        console.log(id,"este es el id")
+
+        let res = await axios.post(`https://jppl-videoclub.herokuapp.com/pedidos/${id}`, config);
+
+        console.log(res.data, "esto es el pedido"); 
+
+        setPedidos(res.data);
+
+
+
+
+    }
 
     const updateUser = async () => {
 
         let body = {
             telefono: parseInt(datosUsuario.telefono),
         }
-
-        let config = {
-            headers: { Authorization: `Bearer ${props.credentials.token}` }
-        };
 
         try {
             //Hacemos el update en la base de datos
@@ -61,6 +84,8 @@ const Profile = (props) => {
 
     }
 
+    
+
     return (
         <div className="designProfile">
             <div className="designProfileHalf profileLeft">
@@ -73,6 +98,10 @@ const Profile = (props) => {
             <div className="designProfileHalf profileRight">
                 <div className="updateBoton" onClick={() => updateUser()}>Update</div>
 
+            </div>
+
+            <div>
+           
             </div>
         </div>
     )
