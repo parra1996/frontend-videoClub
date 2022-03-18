@@ -3,7 +3,7 @@
 
     background-color: beige;
     
-    height: 26.1em;
+    height: 42.2em;
 
     display: flex;
     flex-direction: column;
@@ -11,19 +11,60 @@
     align-items: center;
 }
 
-.loginButton {
-    width: 9em;
-    height: 3em;
+.designFormulario {
+    height: 20em;
+    width: 20em;
 
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    transition: 0.3s;
+    border-radius: 2em;
+
+    background-color: grey;
+}
+
+.form {
+    height: 15em;
+    width: 20em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: yellow;
+
+}
+
+.bott {
+    height: 5em;
+    width: 20em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     background-color: green;
+}
+
+.loginButton {
+    height: 4em;
+    width: 10em;
+
+    background-color: pink;
+
+    border-radius: 2em;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-top: 2em;
 }
 
+.loginButton:hover {
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

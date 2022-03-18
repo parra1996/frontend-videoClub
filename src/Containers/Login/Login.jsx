@@ -51,14 +51,14 @@ const Login = (props) => {
             } else {
 
                 //Guardaríamos los datos en redux...
-                if(resultado.data.usuario.rol === true){
+                if (resultado.data.usuario.rol === true) {
                     navigate('/admin');
                 } else {
                     navigate("/");
                 }
-                props.dispatch({type:LOGIN, payload: resultado.data});
+                props.dispatch({ type: LOGIN, payload: resultado.data });
 
-               
+
             }
 
 
@@ -76,14 +76,17 @@ const Login = (props) => {
     return (
 
         <div className='designLogin'>
-            {<pre>{JSON.stringify(datosUsuario, null, 2)}</pre>}
             <div className="designFormulario">
-                <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e) => { rellenarDatos(e); }} />
-                {msgError}
-                {msgError2}
+                <div className="form">
+                    <input className='inp' type="email" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inp' type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e) => { rellenarDatos(e); }} />
+                    {msgError}
+                    {msgError2}
+                </div>
+                <div className="bott">
+                    <div className="loginButton" onClick={() => login()}>LOG ME!</div>
+                </div>
             </div>
-            <div className="loginButton espacio" onClick={() => login()}>LOG ME!</div>
         </div>
     );
 
