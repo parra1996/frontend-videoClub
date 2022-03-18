@@ -1,20 +1,69 @@
 .designRooster {
-    height: 32em;
+    height: 42.2em;
     width: 100vw;
-
-    background-color: lightskyblue;
-
+    
+    background-color: beige;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
+.designSR {
+    height: 25em;
+    width: 17em;
+
+    background-color: rgba(56, 55, 55, 0.904);
+    
+    border-radius: 2em;
+
+    display: flex;
+    flex-direction: Column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tit {
+    height: 3em;
+    width: 17em;
+
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
 .tituloPelicula {
+
+    height: 3em;
+    width: 14.2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  
     font-size: larger;
     font-weight: bold;
 
-    color: red;
+    color: beige
+}
+
+/* .ti {
+    font-size: 1em;
+} */
+
+.fot {
+    height: 26em;
+    width: 17em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 

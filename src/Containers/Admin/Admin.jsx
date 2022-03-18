@@ -9,6 +9,7 @@ const Admin = (props) => {
 
     let navigate = useNavigate();
     const [usuarios, setUsuarios] = useState([]);
+    const [pedidos, setPedidos] = useState([]);
 
     const traerUsers = async () => {
 
@@ -31,12 +32,33 @@ const Admin = (props) => {
 
     }
 
+    const traerPedidos = async () => {
+        
+        let config = {
+            headers: { Authorization: `Bearer ${props.credentials.token}` }
+        };
+
+        try {
+
+            let res = await axios.get("https://jppl-videoclub.herokuapp.com/pedidos", config)
+
+            console.log(res.data);
+
+            setPedidos(res.data);
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
     useEffect(() => {
 
         if (props.credentials.usuario.rol !== true) {
             navigate("/");
         }
         traerUsers()
+        traerPedidos()
     }, [])
 
     useEffect(() => {

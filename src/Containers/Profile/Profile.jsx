@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {MODIFY_CREDENTIALS} from '../../redux/types';
+import { MODIFY_CREDENTIALS } from '../../redux/types';
 import axios from 'axios';
 
 import "./Profile.css";
@@ -13,15 +13,22 @@ const Profile = (props) => {
 
     //Hooks
     const [datosUsuario, setDatosUsuario] = useState({
-        nombre: props.credentials.usuario.nombre, apellido: props.credentials.usuario.apellido, edad: props.credentials.usuario.edad, email: props.credentials.usuario.email, 
-        dni: props.credentials.usuario.dni,  telefono: props.credentials.usuario.telefono, 
+        id : props.credentials.usuario.id,
+        nombre: props.credentials.usuario.nombre,
+        apellido: props.credentials.usuario.apellido,
+        edad: props.credentials.usuario.edad,
+        email: props.credentials.usuario.email,
+        dni: props.credentials.usuario.dni,
+        telefono: props.credentials.usuario.telefono,
         numCuenta: props.credentials.usuario.numCuenta
     });
 
     //Handler (manejador)
     const rellenarDatos = (e) => {
-        setDatosUsuario({...datosUsuario, 
-            [e.target.name]: e.target.value})
+        setDatosUsuario({
+            ...datosUsuario,
+            [e.target.name]: e.target.value
+        })
     };
 
     useEffect(() => {
@@ -42,11 +49,11 @@ const Profile = (props) => {
 
         try {
             //Hacemos el update en la base de datos
-            let res = await axios.put(`https://jppl-videoclub.herokuapp.com/newpassword/${props.credentials.usuario.id}`,body, config);
+            let res = await axios.put(`https://jppl-videoclub.herokuapp.com/newpassword/${props.credentials.usuario.id}`, body, config);
 
-            if(res){
+            if (res) {
                 //Guardamos en redux
-                props.dispatch({type:MODIFY_CREDENTIALS, payload: datosUsuario});
+                props.dispatch({ type: MODIFY_CREDENTIALS, payload: datosUsuario });
             }
         } catch (error) {
             console.log(error)
@@ -64,8 +71,8 @@ const Profile = (props) => {
                 </div>
             </div>
             <div className="designProfileHalf profileRight">
-                <div className="updateBoton" onClick={()=>updateUser()}>Update</div>  
-             
+                <div className="updateBoton" onClick={() => updateUser()}>Update</div>
+
             </div>
         </div>
     )
