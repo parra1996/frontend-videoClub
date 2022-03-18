@@ -118,18 +118,18 @@ const Register = () => {
                 <div className="upCardRegister">Register Form</div>
                 <div className="middleCardRegister">
                     <div className="inputs">
-                        <input className='inp' type="text" name="nombre" id="nombre" title="nombre" placeholder="Name:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="text" name="apellido" id="apellido" title="apellido" placeholder="Surname:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="text" name="edad" id="edad" title="edad" placeholder="Age:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="email" name="email" id="email" title="email" placeholder="Email:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="text" name="dni" id="dni" title="dni" placeholder="DNI:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="password" name="password" id="password" title="password" placeholder="password:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="password" name="password2" id="password2" title="password2" placeholder="Repeat password:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="text" name="telefono" id="telefono" title="telefono" placeholder="Phone Number:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                        <input className='inp' type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder="AccountNº:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="text" name="nombre" id="nombre" title="nombre" placeholder="Name" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="text" name="apellido" id="apellido" title="apellido" placeholder="Surname" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="text" name="edad" id="edad" title="edad" placeholder="Age" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="email" name="email" id="email" title="email" placeholder="Email" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="text" name="dni" id="dni" title="dni" placeholder="DNI" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="password" name="password" id="password" title="password" placeholder="password" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="password" name="password2" id="password2" title="password2" placeholder="Repeat password" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="text" name="telefono" id="telefono" title="telefono" placeholder="Phone Number" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <input className='inp' type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder="AccountNº" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                     </div>
                     <div className="foticos">
-                        <img src={require('../../img/will.png')} alt='will'></img>
+                        <img className='will' src={require('../../img/will.png')} alt='will'></img>
                     </div>
                 </div>
                 <div className="bottomCardRegister">
