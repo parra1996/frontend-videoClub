@@ -78,13 +78,13 @@ const Login = (props) => {
         <div className='designLogin'>
             <div className="designFormulario">
                 <div className="form">
-                    <input className='inp' type="email" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input className='inp' type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e) => { rellenarDatos(e); }} />
+                    <input className='inp' type="email" name="email" id="email" title="email" placeholder="Email" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inp' type="password" name="password" id="password" title="password" placeholder="Password" autoComplete="off" onChange={(e) => { rellenarDatos(e); }} />
                     {msgError}
                     {msgError2}
                 </div>
                 <div className="bott">
-                    <div className="loginButton" onClick={() => login()}>LOG ME!</div>
+                    <div className="loginButton" onClick={() => login()}><p className='log'>LOG IN</p></div>
                 </div>
             </div>
         </div>

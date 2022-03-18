@@ -13,7 +13,7 @@
 
 .designFormulario {
     height: 20em;
-    width: 20em;
+    width: 30em;
 
     display: flex;
     flex-direction: column;
@@ -22,11 +22,11 @@
 
     border-radius: 2em;
 
-    background-color: grey;
+    background-color: rgba(56, 55, 55, 0.904);
 }
 
 .form {
-    height: 15em;
+    height: 12em;
     width: 20em;
 
     display: flex;
@@ -34,37 +34,45 @@
     justify-content: center;
     align-items: center;
 
-    background-color: yellow;
 
 }
 
 .bott {
-    height: 5em;
+    height: 8em;
     width: 20em;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
-    background-color: green;
 }
+
+
 
 .loginButton {
     height: 4em;
     width: 10em;
 
-    background-color: pink;
+    background-color: beige;
+    color: gray;
 
     border-radius: 2em;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
+    font-size: 1em;
+    text-align: center;
 }
 
 .loginButton:hover {
     background-color: white;
     font-weight: bold;
     cursor: pointer;
+    color:rgba(56, 55, 55, 0.904); ;
 }
+
