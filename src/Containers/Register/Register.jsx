@@ -128,7 +128,9 @@ const Register = () => {
                         <input className='inp' type="text" name="telefono" id="telefono" title="telefono" placeholder="Phone Number:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                         <input className='inp' type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder="AccountNº:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                     </div>
-                    <div className="foticos"></div>
+                    <div className="foticos">
+                        <img src={require('../../img/will.png')} alt='will'></img>
+                    </div>
                 </div>
                 <div className="bottomCardRegister">
                     {msgError}
