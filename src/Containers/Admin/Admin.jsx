@@ -87,7 +87,7 @@ const Admin = (props) => {
                             return (
                                 <div key={pedidos.id} className="pedidos1" >
 
-                                    <p>id:{pedidos.id}. Nombre: {pedidos.usuarioId}. Pelicula: {pedidos.peliculaId}</p>
+                                    <p>id:{pedidos.id}. Nombre: {pedidos.usuarioId}. Pelicula:{pedidos.peliculaId}</p>
                                 </div>
                             )
                         })
