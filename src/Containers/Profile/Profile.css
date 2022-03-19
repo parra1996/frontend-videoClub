@@ -17,6 +17,7 @@
 
     width: 50vw;
     height: 42.2em;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,16 +25,26 @@
 
 }
 
+.profileLeft {
+
+
+    height: 42.2em;
+    width: 50vw;
+
+    background-color: green;
+
+}
+
 .profileRight {
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 
     height: 42.2em;
-    width:53em;
+    width: 50vw;
 
-    background-color:pink;
+    background-color: pink;
 
 }
 
@@ -43,14 +54,21 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(56, 55, 55, 0.74);
+    background-color: rgba(56, 55, 55, 0.938);
     color: beige;
-  margin: 1em;
+    margin: 1em;
 
     width: 20em;
 
     border-radius: 2em;
 
+}
+
+.cartel3 {
+    height: 8em;
+    width: 7.5em;
+
+    border-radius: 2em;
 }
 
 .updateBoton {
@@ -71,16 +89,9 @@
 }
 
 .updateBoton:hover {
-    color: lightsteelblue;
+    color: whitesmoke;
     background-color: hsl(0, 0%, 30%);
     border-radius: 0.2em;
 
 }
-
-
-.cartel3 {
-    height: 10em;
-    width: 7.5em;
-}
-
 

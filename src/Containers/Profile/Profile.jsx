@@ -104,6 +104,7 @@ const Profile = (props) => {
                             return (
                                     <div className="pedidos2" >
                                         <p>id:{pedidos.id}.
+                                        {console.log(pedidos.id, "este es el id papa")}
                                             Title: {pedidos.titulo}.
                                             Email: {pedidos.email}</p>
                                         <img className='cartel3' src={pedidos.image} alt='imagenPelicula'></img>
