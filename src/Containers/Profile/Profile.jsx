@@ -98,17 +98,16 @@ const Profile = (props) => {
             </div>
             <div className="designProfileHalf profileRight">
                 <div>
+                    <p>Lista de tus pedidos, {props.credentials.usuario.name}</p>
                     {
                         pedidos.map(pedidos => {
                             return (
-                                <div key={pedidos.id} className="pedidos2" >
-
-                                    <p>id:{pedidos.id}.
-                                        Name: {pedidos.name}.
-                                        Title: {pedidos.titulo}.
-                                        Email: {pedidos.email}</p>
-                                    <img className='cartel3' src={pedidos.image} alt='imagenPelicula'></img>
-                                </div>
+                                    <div className="pedidos2" >
+                                        <p>id:{pedidos.id}.
+                                            Title: {pedidos.titulo}.
+                                            Email: {pedidos.email}</p>
+                                        <img className='cartel3' src={pedidos.image} alt='imagenPelicula'></img>
+                                    </div>
                             )
                         })
                     }

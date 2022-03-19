@@ -16,14 +16,40 @@
 .designProfileHalf {
 
     width: 50vw;
+    height: 42.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .profileRight {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+
+    height: 42.2em;
+    width:53em;
+
+    background-color:pink;
+
+}
+
+.pedidos2 {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: space-around;
+    align-items: center;
+
+    background-color: rgba(56, 55, 55, 0.74);
+    color: beige;
+  margin: 1em;
+
+    width: 20em;
+
+    border-radius: 2em;
 
 }
 
@@ -36,7 +62,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: lightsteelblue;
+    background-color: beige;
     color: hsl(0, 0%, 30%);
 
     border-radius: 0.2em;
@@ -58,17 +84,3 @@
 }
 
 
-.pedidos2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-color: gray;
-    padding: 1em;
-
-    width: 10em;
-
-   border-radius: 2em;
-
-}
