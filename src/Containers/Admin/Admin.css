@@ -11,14 +11,13 @@
 
 .listaUsuarios {
 
-    height: 42.2em;
     width: 50%;
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    background-color: pink;
 }
 .usuarios1 {
 
@@ -26,12 +25,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     background-color: white;
 
+    margin: .5em;
     height: 3em;
     width: 35em;
 
-    padding: 1em;
 
     border: 1em gray;
 
@@ -40,15 +40,13 @@
 
 .listaPedidos {
     
-    height: 42.2em;
     width: 50%;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content:center;
     align-items: center;
     
-    background-color: green;
 }
 
 .pedidos1 {
@@ -63,8 +61,6 @@
     height: 3em;
     width: 35em;
 
-    padding: 1em;
-
-    border: 1em gray;
+    margin: .5em;
 
 }
