@@ -31,7 +31,6 @@
     height: 42.2em;
     width: 50vw;
 
-    background-color: green;
 
 }
 
@@ -44,7 +43,6 @@
     height: 42.2em;
     width: 50vw;
 
-    background-color: pink;
 
 }
 
@@ -71,27 +69,41 @@
     border-radius: 2em;
 }
 
-.updateBoton {
-    height: 2em;
-    width: 8em;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.updateBoton {
+
+    height: 4em;
+    width: 10em;
 
     background-color: beige;
-    color: hsl(0, 0%, 30%);
 
-    border-radius: 0.2em;
-    cursor: pointer;
+    border-radius: 2em;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  rgba(56, 55, 55, 0.904);
 }
 
 .updateBoton:hover {
-    color: whitesmoke;
-    background-color: hsl(0, 0%, 30%);
-    border-radius: 0.2em;
 
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 
+.recuadro {
+    height: 20em;
+    width: 30em;
+
+    background-color: rgba(56, 55, 55, 0.904);
+
+    border-radius: 4em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: beige;
+}
