@@ -14,7 +14,7 @@ const Home = () => {
    return (
       <div className='designHome'>
          <ReactPlayer
-            url='https://jppl1996.s3.amazonaws.com/yt1s.io-The+Most+Beautiful+Shots+in+Movie+History+II-(480p).mp4'
+            url='https://jp1996.s3.eu-west-3.amazonaws.com/yt1s.io-The+Most+Beautiful+Shots+in+Movie+History+II-(480p).mp4'
             width="100vw"
             height="42.2em"
             controls
