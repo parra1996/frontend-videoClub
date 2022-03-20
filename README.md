@@ -10,7 +10,7 @@ el frontend esta deployado en AWS ( amazon web services ), pueden ingresar por a
 
 La pagina principal es Home, ahi podremos ver un video en la zona central junto con un header y un footer, el header tiene el boton home junto con el nombre de la app, un buscador de peliculas solo si estas logueado, y las opciones de ver las peliculas, loguearte y registrarte.
 
-![](img/homee2.png)
+![](src/img/homee2.png)
 
 Para registrarnos, debemos clickar sobre register y nos redirigirá a la vista de registro, donde podremos introducir nuestros datos para crear un usuario. Se cuiadoso cuando rellenes el formulario porque los campos tinen medidas de seguridad para asegurarse de que no habra errores cuando se guarden tus datos.
 
