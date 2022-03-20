@@ -6,13 +6,21 @@ import { connect } from 'react-redux';
 import { MOVIE_DETAIL } from '../../redux/types';
 import { raiz } from '../../utiles';
 import './Home.css';
+import ReactPlayer from 'react-player';
 
 
 const Home = () => {
 
    return (
       <div className='designHome'>
-         soy home 
+         <ReactPlayer
+            url={require('../../img/intro.mp4')}
+            width="100vw"
+            height="42.2em"
+            controls
+            playing
+            volume={"0.6"}
+         />
 
       </div>
    )
