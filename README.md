@@ -13,7 +13,7 @@ La pagina principal es Home, ahi podremos ver un video en la zona central junto 
 ![](src/img/homee2.png)
 
 Para registrarnos, debemos clickar sobre register y nos redirigirá a la vista de registro, donde podremos introducir nuestros datos para crear un usuario. Se cuiadoso cuando rellenes el formulario porque los campos tinen medidas de seguridad para asegurarse de que no habra errores cuando se guarden tus datos.
-
+![](src/img/register.png)
 Una vez nos hemos registrado, nos redirigirá a la vista de Login, donde deberemos introducir nuestro email y nuestro password con los que nos hemos registrado previamente.
 
 a continuacion ya puedes buscar alguna pelicula por titulo, alquilar alguna pelicula de tu preferencia, ver tu perfil y modificar tus datos, dentro de otras cosas.
@@ -28,7 +28,7 @@ Al loguearte podras ver que aparece el boton de admin, pero no podras ingresar a
 
 ## tecnologias utilizadas:
 
-![](src/img/dependencias.png)  ![](src/reactRedux.png)
+![](src/img/dependencias.png)  ![](src/img/reactRedux.png)
 
 
 
