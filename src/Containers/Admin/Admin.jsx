@@ -81,6 +81,9 @@ const Admin = (props) => {
                             )
                         })
                     }
+                </div>
+
+                <div className='listaPedidos'>
                     <p>LISTA DE TODOS LOS PEDIDOS</p>
                     {
                         pedidos.map(pedidos => {
@@ -92,8 +95,8 @@ const Admin = (props) => {
                             )
                         })
                     }
-
                 </div>
+
 
             </div>
         )
