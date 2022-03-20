@@ -15,12 +15,6 @@ const Profile = (props) => {
 
     //Hooks
     const [datosUsuario, setDatosUsuario] = useState({
-        id: props.credentials.usuario.id,
-        nombre: props.credentials.usuario.nombre,
-        apellido: props.credentials.usuario.apellido,
-        edad: props.credentials.usuario.edad,
-        email: props.credentials.usuario.email,
-        dni: props.credentials.usuario.dni,
         telefono: props.credentials.usuario.telefono,
         numCuenta: props.credentials.usuario.numCuenta
     });
@@ -73,7 +67,7 @@ const Profile = (props) => {
 
         try {
             //Hacemos el update en la base de datos
-            let res = await axios.put(`https://jppl-videoclub.herokuapp.com/newpassword/${props.credentials.usuario.id}`, body, config);
+            let res = await axios.put(`https://jppl-videoclub.herokuapp.com/usuarios/${props.credentials.usuario.id}`, body, config);
 
             if (res) {
                 //Guardamos en redux
@@ -86,6 +80,28 @@ const Profile = (props) => {
     }
 
 
+    /*let body = {
+            id: props.credenciales.usuario.id,
+            nombre: datosUsuario.nombre,
+            edad: datosUsuario.edad,
+            apellidos: datosUsuario.apellidos,
+            nick: datosUsuario.nick
+        }
+        console.log("papayote",body)
+        let config = {
+            headers: { Authorization: `Bearer ${props.credenciales.token}`}
+        };
+        try{
+            // Actualizamos los datos de Usuario en nuestra base de datos.
+            let res = await axios.put(`https://rgd-videoclub-backend.herokuapp.com/usuarios/${props.credenciales.usuario.id}`, body, config);
+            if(res){
+                // Guardamos los datos en Redux.
+                props.dispatch({type:MODIFICAR_CREDENCIALES, payload: datosUsuario});
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }*/ 
 
     return (
         <div className="designProfile">
@@ -94,6 +110,7 @@ const Profile = (props) => {
                 <div className="profileField "><b>Nombre: </b>{props.credentials.usuario.name}</div>
                 <div className="profileField "><b>Apellidos: </b>{props.credentials.usuario.surname}</div>
                 <div className="profileField "><b>Email: </b>{props.credentials.usuario.email}</div>
+                <div className="profileField "><b>Age: </b>{props.credentials.usuario.age}</div>
                 <div className="profileField "><b>Teléfono:</b><input className='inp' type="text" name="telefono" id="telefono" title="telefono" placeholder={props.credentials.usuario.telefono} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
                 <div className="updateBoton" onClick={() => updateUser()}>Update</div>
                 </div>
