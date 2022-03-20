@@ -79,6 +79,7 @@ const Header = (props) => {
             <div className='designHeader'>
                 <div className="headerSpace">
                     <img className='homeButton' src={require('../../img/home4.png')} onClick={()=>navigate('/')} alt="home" />
+                    <p className='movieClub'>MovieClub</p>
                 </div>
                 <div className="headerSpace searchDesign">
                     <Input.Group compact>

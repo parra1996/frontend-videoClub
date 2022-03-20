@@ -12,6 +12,11 @@
     justify-content: center;
 }
 
+.movieClub {
+    color: beige;
+    font-size: 3em;
+}
+
 .headerSpace {
     width: 33vw;
     height: 8em;
