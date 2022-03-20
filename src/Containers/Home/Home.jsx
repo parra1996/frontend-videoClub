@@ -19,7 +19,7 @@ const Home = () => {
             height="42.2em"
             controls
             playing
-            volume={"0.6"}
+            volume={0.6}
          />
 
       </div>

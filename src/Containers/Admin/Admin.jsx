@@ -104,7 +104,7 @@ const Admin = (props) => {
         return (
             <div className='designPelicula'>
                 <div className="marginLoader">
-                    <img src={require('../../img/loader.gif')} alt="cargador" />
+                    <img src={require('../../img/spi.gifgif')} alt="cargador" />
                 </div>
             </div>
         )

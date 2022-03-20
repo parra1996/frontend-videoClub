@@ -68,7 +68,7 @@ const Profile = (props) => {
         try {
             //Hacemos el update en la base de datos
             let res = await axios.put(`https://jppl-videoclub.herokuapp.com/usuarios/${props.credentials.usuario.id}`, body, config);
-
+            alert("your phpne number has been changed successfully");
             if (res) {
                 //Guardamos en redux
                 props.dispatch({ type: MODIFY_CREDENTIALS, payload: datosUsuario });
