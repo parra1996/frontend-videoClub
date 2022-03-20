@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <div className="designFooter">
-            GeeksHubs Academy - 2022
+            Juan Pablo Parra Labarca. 2022
         </div>
     )
 
