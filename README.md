@@ -16,19 +16,23 @@ Para registrarnos, debemos clickar sobre register y nos redirigirá a la vista d
 ![](src/img/register.png)
 Una vez nos hemos registrado, nos redirigirá a la vista de Login, donde deberemos introducir nuestro email y nuestro password con los que nos hemos registrado previamente.
 
+![](src/img/login.png)
+
 a continuacion ya puedes buscar alguna pelicula por titulo, alquilar alguna pelicula de tu preferencia, ver tu perfil y modificar tus datos, dentro de otras cosas.
 
 si vas a movies, y te llama la atencion alguna de ellas, puedes clickear en ellas y te llevara a mostrarte detalles sobre ellas y la opcion de alquilarla.
-
+![](src/img/movies.png)
 si vas a buscar una pelicula por titulo (solo si estas logueado como dije anteriormente) escribes su nombre en el busquedar, de encontrarla en el store te la mostrara y de no ser asi te enviara un mensaje diciendo que no la tiene y que por favor busques otra.
-
+![](src/img/busqueda.png)
 si vas a tu perfil puedes ver tus datos como nombre, apellido, correo, numero de telefono y edad, asi como tambien todos los pedidos que has realizado. En caso de querer actualizar tu telefono puedes hacerlo escribiendolo en el campo y dandole al boton de actualizar.
+
+![](src/img/profile.png)
 
 Al loguearte podras ver que aparece el boton de admin, pero no podras ingresar a no ser que tengas el permiso de administrador, eres libre de intentar ;) .
 
 ## tecnologias utilizadas:
 
-![](src/img/dependencias.png)  ![](src/img/reactRedux.png)
+![](src/img/dependencias.png)  ![](src/img/reactRedux.png) ![](src/img/heroku.png)
 
 
 
