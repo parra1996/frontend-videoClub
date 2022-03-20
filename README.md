@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# proyecto FrontEnd de mi video club! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto coohome.pngnsiste en recrear el frontend de una pagina web de alquiler de peliculas donde los usuarios podran registrarse, ver las peliculas disponibles, y hacer pedidos, conectando con mi backend y base de datos que hice realice en mi proyecto backend que podrian ver aqui: https://github.com/parra1996/proyecto-VideoClub .
 
-## Available Scripts
+## instrucciones: 
 
-In the project directory, you can run:
+el frontend esta deployado en AWS ( amazon web services ), pueden ingresar por aca: https://master.d1hrx4ba14ehzf.amplifyapp.com/.
 
-### `npm start`
+## bienvenida.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La pagina principal es Home, ahi podremos ver un video en la zona central junto con un header y un footer, el header tiene el boton home junto con el nombre de la app, un buscador de peliculas solo si estas logueado, y las opciones de ver las peliculas, loguearte y registrarte.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![](src/img/homee2.png)
 
-### `npm test`
+Para registrarnos, debemos clickar sobre register y nos redirigirá a la vista de registro, donde podremos introducir nuestros datos para crear un usuario. Se cuiadoso cuando rellenes el formulario porque los campos tinen medidas de seguridad para asegurarse de que no habra errores cuando se guarden tus datos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Una vez nos hemos registrado, nos redirigirá a la vista de Login, donde deberemos introducir nuestro email y nuestro password con los que nos hemos registrado previamente.
 
-### `npm run build`
+a continuacion ya puedes buscar alguna pelicula por titulo, alquilar alguna pelicula de tu preferencia, ver tu perfil y modificar tus datos, dentro de otras cosas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+si vas a movies, y te llama la atencion alguna de ellas, puedes clickear en ellas y te llevara a mostrarte detalles sobre ellas y la opcion de alquilarla.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+si vas a buscar una pelicula por titulo (solo si estas logueado como dije anteriormente) escribes su nombre en el busquedar, de encontrarla en el store te la mostrara y de no ser asi te enviara un mensaje diciendo que no la tiene y que por favor busques otra.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+si vas a tu perfil puedes ver tus datos como nombre, apellido, correo, numero de telefono y edad, asi como tambien todos los pedidos que has realizado. En caso de querer actualizar tu telefono puedes hacerlo escribiendolo en el campo y dandole al boton de actualizar.
 
-### `npm run eject`
+Al loguearte podras ver que aparece el boton de admin, pero no podras ingresar a no ser que tengas el permiso de administrador, eres libre de intentar ;) .
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## tecnologias utilizadas:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](img/axios.png)    ![](img/node%20express.png)   ![](img/bcrypt.png)   ![](img/sql.png)   ![](img/jwtAuth.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
