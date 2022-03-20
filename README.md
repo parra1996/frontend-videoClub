@@ -28,7 +28,8 @@ Al loguearte podras ver que aparece el boton de admin, pero no podras ingresar a
 
 ## tecnologias utilizadas:
 
-![](img/axios.png)    ![](img/node%20express.png)   ![](img/bcrypt.png)   ![](img/sql.png)   ![](img/jwtAuth.png)
+![](src/img/dependencias.png)  ![](src/reactRedux.png)
+
 
 
 
